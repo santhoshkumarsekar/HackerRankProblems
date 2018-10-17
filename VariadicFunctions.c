@@ -9,7 +9,7 @@
          fun(int number_of_args,...){
          //definitions
          }
-      if number_of_args=6;
+      assume number_of_args = 6;
          fun(number_of_args,1,2,3,4,5,6);  //call
 */
 
@@ -17,18 +17,18 @@
 
 #include<stdarg.h>  
 #include<stdio.h>
-int sum(int no_args,...){
-int sum=0;
+int sum( int no_args, ... ) { 
+int sum = 0;
 va_list ls;
 //Initiailizing the list with ... args
-va_start(ls,no_args);
-for(int i=0;i<no_args;i++)
-sum+=(int)va_arg(ls,int);   //acessing elements on the list that should be added with sum variable
- va_end(ls);
+va_start( ls, no_args );
+for( int i = 0; i < no_args; i++ )
+sum += (int) va_arg( ls, int );   //acessing elements on the list that should be added with sum variable
+ va_end( ls );
 return sum;
 }
-int main(void){
-printf("%d",sum(3,1,2,3));
+int main( void ) {
+printf("%d", sum( 3, 1, 2 ,3 ) );
 return 0;
 }
 
