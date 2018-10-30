@@ -1,2 +1,2 @@
 # HackerRankProblems
-#This Directory contains full of HackerRankProblems
+#This Directory contains full of HackerRank Hard Level Problems
